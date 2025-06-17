@@ -54,7 +54,7 @@ export default function Calculator() {
         <div className="min-h-screen bg-gradient-to-b from-purple-50 to-gray-100 flex flex-col items-center">
         {/* Encabezado */}
         <div className="w-full bg-white shadow-sm border-b border-gray-100 flex justify-center py-3 px-6">
-            <a href="/"className="">
+            <a href="/home"className="">
                 <img src={logo} alt="CrediPlus Logo" className="h-10 w-auto" />
             </a>
         </div>

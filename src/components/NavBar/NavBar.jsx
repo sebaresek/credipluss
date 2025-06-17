@@ -30,7 +30,7 @@ const NavBar = () => {
                 </label>
             </div>
             <div className={style.nav_logo}>
-                <a href="/" className={style.nav_logo_i}>
+                <a href="/home" className={style.nav_logo_i}>
                     <img src={logo} alt="logo" width="150px"/>
                 </a>
             </div>
@@ -43,10 +43,10 @@ const NavBar = () => {
              <ul id='main-menu' className={`${style.main_menu} ${menuActive ? style.menu_active : ''}`}>
 
                 <li className={style.main_menu_item_one}>
-                    <a href="/" className={style.main_menu_link}> Inicio </a>
+                    <a href="/home" className={style.main_menu_link}> Inicio </a>
                 </li>
                 <li className={style.main_menu_item}>
-                    <a href="/simulador" className={style.main_menu_link}> Calculadora </a>
+                    <a href="/" className={style.main_menu_link}> Calculadora </a>
                 </li>
                 <li className={style.main_menu_item}>
                     <a href="https://wa.link/t8vn4u" 
