@@ -1,0 +1,102 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.8;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.gradientButton {
+  background: linear-gradient(70deg, rgb(97, 74, 217), rgba(56, 87, 173, 0.84) 51%, rgb(97, 74, 217));
+  background-size: 200% 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  animation: gradientShift 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite alternate;
+  border-radius: 9999px; /* para que funcione como rounded-full */
+}
+
+.gradientButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(97, 74, 217), rgba(56, 87, 173, 0.84) 51%, rgb(97, 74, 217));
+  background-size: 200% 100%;
+  filter: blur(10px);
+  border-radius: 9999px;
+  animation: gradientShift 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite alternate, pulse 2s ease-in-out infinite alternate;
+}
+
+.sliderCustom::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+.sliderCustom::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+
+.sliderCustom::-ms-thumb {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .sliderCustom::-webkit-slider-thumb {
+    width: 30px !important;
+    height: 30px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+  }
+
+  .sliderCustom {
+    height: 8px !important;
+  }
+
+  .sliderCustom:focus {
+    outline: none !important;
+  }
+}

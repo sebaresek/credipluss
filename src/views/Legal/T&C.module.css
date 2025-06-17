@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../../fonts/63c9976a472734b51a548b06_Aeonik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../../fonts/63c9976a4d2d483271d89331_Aeonik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../../fonts/63c9976a05ba7b44d1e1241e_Aeonik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.terminos_container {
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  color: #2c3e50;
+  line-height: 1.7;
+  font-size: 16px;
+  white-space: pre-line;
+}
+
+.terminos_container h2 {
+  /* font-weight: 400; */
+  /* font-size: 2rem; */
+  margin-bottom: 1rem;
+  /* color: #0d47a1; */
+  border-bottom: 2px solid #0d47a1;
+  padding-bottom: 8px;
+  text-align: center; 
+}
+
+.terminos_container h3 {
+  font-size: 1.25rem;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  color: #1565c0;
+}
+
+.terminos_container ul {
+  margin: 0 0 20px 1.3rem;
+  padding-left: 0;
+  list-style-type: disc;
+}
+
+.terminos_container li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .terminos_container {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  .terminos_container h2 {
+    font-size: 1.6rem;
+  }
+
+  .terminos_container h3 {
+    font-size: 1.1rem;
+  }
+  .terminos_container p {
+    text-align: justify;
+  }
+}
