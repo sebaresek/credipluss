@@ -144,8 +144,6 @@ const CrediPlusHome = () => {
                                     <a
                                         id="crediplus.site"
                                         href="/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                         className="call-to-action is_purple-background text-size-large margin w-inline-block"
                                     >
                                         <div className="cta-text">Simular préstamo</div>
