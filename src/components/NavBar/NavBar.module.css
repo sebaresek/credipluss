@@ -180,6 +180,9 @@
     height: 100%;
     width: auto;
   }
+  .nav {
+    height: 80px !important;
+  }
   .main_menu_item_one{
     margin-top: 5rem;
   }

@@ -25,6 +25,10 @@
   }
 }
 
+.padd{
+  padding-top: 4rem;
+}
+
 .gradientButton {
   background: linear-gradient(70deg, rgb(97, 74, 217), rgba(56, 87, 173, 0.84) 51%, rgb(97, 74, 217));
   background-size: 200% 100%;
@@ -98,5 +102,10 @@
 
   .sliderCustom:focus {
     outline: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .padd{
+    padding-top: 0px;
   }
 }

@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import style from './Home.module.css';
-import primerImg from '../../images/primer.png';
+// import primerImg from '../../images/primer.png';
+import primerImg from '../../images/oldsra.png';
 import adelantosGif from '../../images/6421dc7f09ac57d3c8054321_Adelantos_V2.gif';
 import patearGif from '../../images/6421decac667fa5591176837_Patear.gif';
-import recibidoImg from '../../images/recibido.png';
+// import recibidoImg from '../../images/recibido.png';
+import recibidoImg from '../../images/otorgado.png';
 import NavBar from '../../components/NavBar/NavBar';
 
 const CrediPlusHome = () => {
@@ -32,7 +34,7 @@ const CrediPlusHome = () => {
         <NavBar/>
             <div className={style.padd}></div>
             <div className="wrapper">
-                <div className="horizontal-flex">
+                <div className="horizontal-flex" style={{ paddingBottom: '25px' }}>
                     <div className="hero_text-wrapper">
                         <h1 className="hero-title personas">
                             <span className="text-span-2">Préstamos y <br />adelantos </span>rápidos <br />y sin trámites
@@ -41,8 +43,11 @@ const CrediPlusHome = () => {
                         <div className="lottie-text-hero-mobile" />
                         <div className="hero_apps-wrapper mobile-hide" style={{ transform: 'translate3d(0, 20px, 0)', opacity: 0 }} />
                     </div>
+
                     <div className="hero_lottie-wrapper">
-                        <img className="primer" src={primerImg} alt="Préstamo rápido" />
+                        {/* <div className={style.imgg}> */}
+                            <img className={style.imgg} src={primerImg} alt="Préstamo rápido" />
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
