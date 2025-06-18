@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import style from './Home.module.css';
-// import primerImg from '../../images/primer.png';
 import primerImg from '../../images/oldsra.png';
 import adelantosGif from '../../images/6421dc7f09ac57d3c8054321_Adelantos_V2.gif';
 import patearGif from '../../images/6421decac667fa5591176837_Patear.gif';
-// import recibidoImg from '../../images/recibido.png';
 import recibidoImg from '../../images/otorgado.png';
 import NavBar from '../../components/NavBar/NavBar';
 
