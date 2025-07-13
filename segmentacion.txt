@@ -1,0 +1,8 @@
+SEGMENTACION:
+Financial services
+Anuncios clasificados
+Credit (finance)
+Credit cards (credit & lending)
+Loan (credit & lending)
+Refinancing (credit & lending)
+Used car (vehicle)

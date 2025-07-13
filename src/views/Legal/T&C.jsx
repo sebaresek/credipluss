@@ -106,7 +106,7 @@ const TerminosCrediplus = () => {
                     </p>
                     <p>
                         📍 Dirección: Ituzaingó y Thomas Guido, Posadas, Misiones<br />
-                        📞 Teléfono: +54 3765-084215<br />
+                        📞 Teléfono: +54 3765-074528<br />
                         📧 Email: crediplus.arr@gmail.com
                     </p>
                 </section>

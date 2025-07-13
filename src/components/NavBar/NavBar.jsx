@@ -49,7 +49,7 @@ const NavBar = () => {
                     <a href="/" className={style.main_menu_link}> Calculadora </a>
                 </li>
                 <li className={style.main_menu_item}>
-                    <a href="https://wa.link/t8vn4u" 
+                    <a href="https://wa.link/ryu56o" 
                         target="_blank" rel="noopener noreferrer"
                         className={style.main_menu_link_wsp}> 
                         WhatsApp 
