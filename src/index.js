@@ -1,19 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import Home from './views/Home/Home';
-// import Calculator from './views/Calculator/calculator';
-// import reportWebVitals from './reportWebVitals';
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <Home />
-//     <Calculator />
-//   </React.StrictMode>
-// );
-
-// reportWebVitals();
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

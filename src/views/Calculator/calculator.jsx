@@ -46,7 +46,7 @@ export default function Calculator() {
         setMonto(parseInt(e.target.value, 10));
     };
 
-    const linkWhatsApp = `https://wa.me/3765074528?text=Me%20interesa%20solicitar%20un%20préstamo%20de%20$${monto.toLocaleString(
+    const linkWhatsApp = `https://wa.me/3765074537?text=Me%20interesa%20solicitar%20un%20préstamo%20de%20$${monto.toLocaleString(
         "es-AR"
     )}%20para%20pagar%20en%20${plazo}`;
 
@@ -197,7 +197,7 @@ export default function Calculator() {
 
             {/* Botón WhatsApp */}
             <a
-                href="https://wa.link/ryu56o"
+                href="https://wa.link/zay1yv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 hover:scale-110 transition-all">

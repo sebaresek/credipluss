@@ -69,7 +69,7 @@ const CrediPlusHome = () => {
                                         </p>
                                     </div>
                                     <div className="card-bottom-div">
-                                        <a href="https://wa.link/ryu56o" 
+                                        <a href="https://wa.link/zay1yv" 
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="call-to-action w-inline-block">
@@ -94,7 +94,7 @@ const CrediPlusHome = () => {
                                         </p>
                                     </div>
                                     <div className="card-bottom-div">
-                                        <a href="https://wa.link/ryu56o" 
+                                        <a href="https://wa.link/zay1yv" 
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="call-to-action is_black-white w-inline-block">
@@ -123,7 +123,7 @@ const CrediPlusHome = () => {
                                     </div>
                                     <div className="card-bottom-div">
                                         <div className={style.btn}>
-                                            <a href="https://wa.link/ryu56o" 
+                                            <a href="https://wa.link/zay1yv" 
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="call-to-action w-inline-block">
