@@ -11,36 +11,47 @@ export default function Calculator() {
     let total = monto;
 
     if (plazo === "15 días") {
-        total *= 1.4;
-        return total.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 }); // Total
+        total *= 1.35; // +35%
+        return total.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     } else if (plazo === "30 días") {
-        total *= 1.55;
-        return total.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 }); // Total
+        total *= 1.50; // +50%
+        return total.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     } else if (plazo === "2 meses") {
-        total *= 1.85;
+        total *= 1.70; // +70%
         const cuotaMensual = total / 2;
-        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 }); // Cuota mensual
+        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     } else if (plazo === "3 meses") {
-        total *= 2.05; // Corregido para dar cuotas de ~68.333
+        total *= 1.90; // +90%
         const cuotaMensual = total / 3;
-        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 }); // Cuota mensual
+        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     } else if (plazo === "6 meses") {
-        total *= 2.7;
+        total *= 2.30; // +130%
         const cuotaMensual = total / 6;
-        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 }); // Cuota mensual
+        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    } else if (plazo === "9 meses") {
+        total *= 2.50; // +150%
+        const cuotaMensual = total / 9;
+        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    } else if (plazo === "12 meses") {
+        total *= 2.70; // +170%
+        const cuotaMensual = total / 12;
+        return cuotaMensual.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     }
     return total.toLocaleString("es-AR");
     };
 
     // Función para mostrar el interés como texto
-    const getInteresTexto = (plazo) => {
-        if (plazo === "15 días") return "40%";
-        if (plazo === "30 días") return "55%";
-        if (plazo === "2 meses") return "85%";
-        if (plazo === "3 meses") return "105%";
-        if (plazo === "6 meses") return "170%";
-        return "";
-    };
+const getInteresTexto = (plazo) => {
+    if (plazo === "15 días") return "35%";
+    if (plazo === "30 días") return "50%";
+    if (plazo === "2 meses") return "70%";
+    if (plazo === "3 meses") return "90%";
+    if (plazo === "6 meses") return "130%";
+    if (plazo === "9 meses") return "150%";
+    if (plazo === "12 meses") return "170%";
+    return "";
+};
+
 
     const handleMontoChange = (e) => {
         setMonto(parseInt(e.target.value, 10));
@@ -110,7 +121,7 @@ export default function Calculator() {
                 <div className="space-y-6">
                 <p className="text-center text-gray-600 text-lg">¿En cuánto tiempo?</p>
                 <div className="flex justify-center gap-3 flex-wrap">
-                    {["15 días", "30 días", "2 meses", "3 meses", "6 meses"].map((opcion) => (
+                    {["15 días", "30 días", "2 meses", "3 meses", "6 meses", "9 meses", "12 meses"].map((opcion) => (
                     <button
                         key={opcion}
                         onClick={() => setPlazo(opcion)}
