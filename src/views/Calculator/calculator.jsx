@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from './Calculator.module.css'
 import NavBar from '../../components/NavBar/NavBar';
+import FallingLights from '../../components/FallingLights/FallingLights'
 
 export default function Calculator() {
     const [monto, setMonto] = useState(500000);
@@ -65,6 +66,7 @@ const getInteresTexto = (plazo) => {
         <div>
             {/* Encabezado */}
             <NavBar/>
+            <FallingLights/>
             <div className={style.padd}></div>
             <div className="min-h-screen bg-gradient-to-b from-purple-50 to-gray-100 flex flex-col items-center">
             {/* <div className="w-full bg-white shadow-sm border-b border-gray-100 flex justify-center py-3 px-6">
@@ -75,77 +77,95 @@ const getInteresTexto = (plazo) => {
 
             {/* Contenido */}
             <div className="w-full max-w-md space-y-8 pb-16 p-6">
-                <div className="text-center space-y-2">
-                <h1 className="text-4xl font-light text-gray-900 leading-tight">
-                    Simulá tu{" "}
-                    <span className="text-purple-600 font-semibold">Préstamo</span> y
-                    recibilo al instante
-                </h1>
-                </div>
+                <div className={style.container}>
+                    <div className="text-center space-y-2">
+                    <h1 className="text-4xl font-light text-gray-900 leading-tight">
+                        Simulá tu{" "}
+                        <span className="text-purple-600 font-semibold">Préstamo</span> y
+                        recibilo al instante
+                    </h1>
+                    </div>
 
-                {/* Monto */}
-                <div className="space-y-6">
-                <p className="text-center text-gray-600 text-lg">¿Cuánto querés pedir?</p>
-                <div className="text-center">
-                    <span className="text-5xl font-bold text-purple-600">
-                    ${monto.toLocaleString("es-AR")}
-                    </span>
-                </div>
-                <div className="relative ">
-                    <input
-                    type="range"
-                    min="50000"
-                    max="1000000"
-                    step="5000"
-                    value={monto}
-                    onChange={handleMontoChange}
-                    style={{
-                        background: `linear-gradient(to right, #3858ad 0%, rgb(104 85 247) ${
-                        ((monto - 50000) / 950000) * 100
-                        }%, #e5e7eb ${(monto - 50000) / 950000 * 100}%, #e5e7eb 100%)`,
-                    }}
-                    className={`${style.sliderCustom} w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer z-10 relative`}
-                    />
-                    {/* Thumb visual */}
-                    <div
-                    style={{
-                        left: `clamp(0%, calc(${((monto - 50000) / 950000) * 100}% - 12px), calc(100% - 24px))`,
-                        border: "2px solid rgb(85, 115, 247)",
-                    }}
-                    className="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-md z-20 pointer-events-none"
-                    ></div>
-                </div>
-                </div>
+                    {/* <img className={style.img} alt="Préstamo rápido" src="https://cdn.prod.website-files.com/63091bbd808ef433808b70cd/67fae7be7de0cd9c38fd389f_DolarOficial.avif"></img> */}
+                    {/* Monto */}
+                    <div className="space-y-6 pt-[15px]">
+                    <div className={style.conteiner_img}> 
+                        <p className="text-gray-600 text-lg">¿Cuánto querés pedir?
+                        <img 
+                            alt="Préstamo rápido" 
+                            src="https://cdn.prod.website-files.com/63091bbd808ef433808b70cd/67fae7be7de0cd9c38fd389f_DolarOficial.avif" 
+                        />
+                        </p>
+                        <div className="space-y-6">
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <span className="text-5xl font-bold text-purple-600">
+                        ${monto.toLocaleString("es-AR")}
+                        </span>
+                    </div>
+                    <div className="relative ">
+                        <input
+                        type="range"
+                        min="50000"
+                        max="1000000"
+                        step="5000"
+                        value={monto}
+                        onChange={handleMontoChange}
+                        style={{
+                            background: `linear-gradient(to right, #3858ad 0%, rgb(104 85 247) ${
+                            ((monto - 50000) / 950000) * 100
+                            }%, #e5e7eb ${(monto - 50000) / 950000 * 100}%, #e5e7eb 100%)`,
+                        }}
+                        className={`${style.sliderCustom} w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer z-10 relative`}
+                        />
+                        {/* Thumb visual */}
+                        <div
+                        style={{
+                            left: `clamp(0%, calc(${((monto - 50000) / 950000) * 100}% - 12px), calc(100% - 24px))`,
+                            border: "2px solid rgb(85, 115, 247)",
+                        }}
+                        className="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-md z-20 pointer-events-none"
+                        ></div>
+                    </div>
+                    </div>
 
-                {/* Plazos */}
-                <div className="space-y-6">
-                <p className="text-center text-gray-600 text-lg">¿En cuánto tiempo?</p>
-                <div className="flex justify-center gap-3 flex-wrap">
-                    {["15 días", "30 días", "2 meses", "3 meses", "6 meses", "9 meses", "12 meses"].map((opcion) => (
-                    <button
-                        key={opcion}
-                        onClick={() => setPlazo(opcion)}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                        plazo === opcion
-                            ? "bg-purple-600 text-white shadow-lg scale-105"
-                            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                        }`}
-                    >
-                        {opcion}
-                    </button>
-                    ))}
-                </div>
-                </div>
+                    {/* Plazos */}
+                    <div className="space-y-6">
+                    <p className="text-center text-gray-600 text-lg">¿En cuánto tiempo?</p>
+                    <div className="flex justify-center gap-3 flex-wrap">
+                        {[
+                            // "15 días", 
+                            "30 días", 
+                            "2 meses", 
+                            "3 meses", 
+                            "6 meses", 
+                            "9 meses", 
+                            "12 meses"].map((opcion) => (
+                        <button
+                            key={opcion}
+                            onClick={() => setPlazo(opcion)}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            plazo === opcion
+                                ? "bg-purple-600 text-white shadow-lg scale-105"
+                                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                            }`}
+                        >
+                            {opcion}
+                        </button>
+                        ))}
+                    </div>
+                    </div>
 
-                {/* Resultado */}
-                <div className="text-center space-y-3">
-                <p className="text-gray-600 text-lg">Valor de cuota</p>
-                <p className="text-4xl font-bold text-gray-800">
-                    $ {calcularCuota(monto, plazo)}
-                </p>
-                <p className="text-sm text-gray-500">Interés: {getInteresTexto(plazo)}</p>
+                    {/* Resultado */}
+                    <div className="text-center space-y-3">
+                    <p className="text-gray-600 text-lg">Valor de cuota</p>
+                    <p className="text-4xl font-bold text-gray-800">
+                        $ {calcularCuota(monto, plazo)}
+                    </p>
+                    <p className="text-sm text-gray-500">Interés: {getInteresTexto(plazo)}</p>
+                    </div>
                 </div>
-
                 {/* Botón */}
                 <div className="space-y-4">
                 <a
