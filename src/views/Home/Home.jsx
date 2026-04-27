@@ -118,7 +118,7 @@ const CrediPlusHome = () => {
                                         <h3 className="card-heading is_black">Simulá tus Cuotas Online desde tu Celular!</h3>
                                         <p className="card-paragraph is_black">
                                             Descubrí la forma más simple de simular tu préstamo. Solo necesitás tu teléfono para acceder a la calculadora de cuotas online 👇🏽
-                                            <br /><br /><span style={{ fontSize: '0.8em' }}>🌐</span> www.crediplus.site
+                                            <br /><br /><span style={{ fontSize: '0.8em' }}>🌐</span> www.crediplus.store
                                         </p>
                                     </div>
                                     <div className="card-bottom-div">
@@ -145,7 +145,7 @@ const CrediPlusHome = () => {
                             <div className="horizontal-flex">
                                 <div className="content-wrapper-bcra">
                                     <a
-                                        id="crediplus.site"
+                                        id="crediplus.store"
                                         href="/"
                                         className="call-to-action is_purple-background text-size-large margin w-inline-block"
                                     >
