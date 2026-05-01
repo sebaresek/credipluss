@@ -18,18 +18,3 @@ Puedes visitar el sitio en vivo aquí: [www.crediplus.store](https://www.credipl
 * **Tailwind CSS** (UI estilizada)
 * **Vite** (Build tool)
 * **Lucide Icons** (Iconografía minimalista)
-
-## 🚀 Instalación Local
-
-Para ejecutar el proyecto en tu entorno local:
-
-```bash
-# 1. Clonar el repositorio
-git clone [https://github.com/tu-usuario/crediplus-web.git](https://github.com/tu-usuario/crediplus-web.git)
-cd crediplus-web
-
-# 2. Instalar las dependencias
-npm install
-
-# 3. Iniciar el servidor de desarrollo
-npm run dev
